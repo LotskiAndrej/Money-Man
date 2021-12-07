@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		B80D9C202757FB3A007012DE /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80D9C1F2757FB3A007012DE /* MainTabView.swift */; };
 		B80D9C222757FB6A007012DE /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80D9C212757FB6A007012DE /* CalendarView.swift */; };
+		B8797DB5275F70CC00A34BF6 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8797DB4275F70CC00A34BF6 /* Date+Extensions.swift */; };
 		B87B593D2757E9FE0068D334 /* Money_ManApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87B593C2757E9FE0068D334 /* Money_ManApp.swift */; };
 		B87B593F2757E9FE0068D334 /* MoneyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87B593E2757E9FE0068D334 /* MoneyListView.swift */; };
 		B87B59412757E9FF0068D334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B87B59402757E9FF0068D334 /* Assets.xcassets */; };
 		B87B59442757E9FF0068D334 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B87B59432757E9FF0068D334 /* Preview Assets.xcassets */; };
+		B8F6368C275948FC00BF71F7 /* MoneyEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F6368B275948FC00BF71F7 /* MoneyEntry.swift */; };
+		B8F6368E2759498700BF71F7 /* MoneyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F6368D2759498700BF71F7 /* MoneyListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B80D9C1F2757FB3A007012DE /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		B80D9C212757FB6A007012DE /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		B8797DB4275F70CC00A34BF6 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		B87B59392757E9FE0068D334 /* Money Man.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Money Man.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B87B593C2757E9FE0068D334 /* Money_ManApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money_ManApp.swift; sourceTree = "<group>"; };
 		B87B593E2757E9FE0068D334 /* MoneyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyListView.swift; sourceTree = "<group>"; };
 		B87B59402757E9FF0068D334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B87B59432757E9FF0068D334 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B87B594A2757EA340068D334 /* Money Man.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Money Man.entitlements"; sourceTree = "<group>"; };
+		B8F6368B275948FC00BF71F7 /* MoneyEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyEntry.swift; sourceTree = "<group>"; };
+		B8F6368D2759498700BF71F7 /* MoneyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				B87B593E2757E9FE0068D334 /* MoneyListView.swift */,
+				B8F6368D2759498700BF71F7 /* MoneyListViewModel.swift */,
 			);
 			path = MoneyList;
 			sourceTree = "<group>";
@@ -69,6 +76,14 @@
 				B80D9C1F2757FB3A007012DE /* MainTabView.swift */,
 			);
 			path = MainTabView;
+			sourceTree = "<group>";
+		};
+		B8797DB3275F70B700A34BF6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B8797DB4275F70CC00A34BF6 /* Date+Extensions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		B87B59302757E9FE0068D334 = {
@@ -92,7 +107,9 @@
 			children = (
 				B87B594A2757EA340068D334 /* Money Man.entitlements */,
 				B87B593C2757E9FE0068D334 /* Money_ManApp.swift */,
+				B8F6368A275948DD00BF71F7 /* Models */,
 				B80D9C1D2757F641007012DE /* Features */,
+				B8797DB3275F70B700A34BF6 /* Utilities */,
 				B87B59402757E9FF0068D334 /* Assets.xcassets */,
 				B87B59422757E9FF0068D334 /* Preview Content */,
 			);
@@ -105,6 +122,14 @@
 				B87B59432757E9FF0068D334 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B8F6368A275948DD00BF71F7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B8F6368B275948FC00BF71F7 /* MoneyEntry.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,8 +204,11 @@
 			files = (
 				B87B593F2757E9FE0068D334 /* MoneyListView.swift in Sources */,
 				B87B593D2757E9FE0068D334 /* Money_ManApp.swift in Sources */,
+				B8797DB5275F70CC00A34BF6 /* Date+Extensions.swift in Sources */,
 				B80D9C222757FB6A007012DE /* CalendarView.swift in Sources */,
+				B8F6368E2759498700BF71F7 /* MoneyListViewModel.swift in Sources */,
 				B80D9C202757FB3A007012DE /* MainTabView.swift in Sources */,
+				B8F6368C275948FC00BF71F7 /* MoneyEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +349,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -354,7 +382,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

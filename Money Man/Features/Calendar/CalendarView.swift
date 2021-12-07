@@ -9,12 +9,14 @@ import SwiftUI
 import Combine
 
 struct CalendarView: View {
+    @ObservedObject var viewModel: MoneyListViewModel
+    
     var body: some View {
         NavigationView {
             List {
-                Text("test1")
-                Text("test2")
-                Text("test3")
+                ForEach(viewModel.sectionByMonth) { entry in
+                    Text(entry.title)
+                }
             }
             .navigationTitle("Calendar")
         }

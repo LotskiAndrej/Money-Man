@@ -13,14 +13,14 @@ struct MainTabView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            MoneyListView()
+            MoneyListView(viewModel: MoneyListViewModel())
             .tabItem {
                 Image(systemName: selectedTab == 0 ? "dollarsign.circle.fill" : "dollarsign.circle")
                 Text("Money List")
             }
             .tag(0)
             
-            CalendarView()
+            CalendarView(viewModel: MoneyListViewModel())
             .tabItem {
                 Image(systemName: selectedTab == 1 ? "calendar.circle.fill" : "calendar.circle")
                 Text("Calendar")
