@@ -1,15 +1,20 @@
 //
-//  MoneyListViewModel.swift
+//  DataSource.swift
 //  Money Man
 //
-//  Created by Andrej Lotski on 2/12/21.
+//  Created by Andrej Lotski on 8/12/21.
 //
 
-import Combine
-import SwiftUI
+import Foundation
 
-class MoneyListViewModel: ObservableObject {
-    @Published var moneyEntries = [
+class DataSource {
+    private var entries = [
+        MoneyEntry(title: "Jadenje",
+                   price: 320,
+                   entryDate: Date.from(year: 2021, month: 8, day: 4, hour: 1, minute: 0)),
+        MoneyEntry(title: "Upaljac",
+                   price: 40,
+                   entryDate: Date.from(year: 2021, month: 3, day: 22, hour: 20, minute: 4)),
         MoneyEntry(title: "Sok",
                    price: 50,
                    entryDate: Date.from(year: 2021, month: 5, day: 16, hour: 12, minute: 20)),
@@ -35,23 +40,8 @@ class MoneyListViewModel: ObservableObject {
                    price: 150,
                    entryDate: Date.from(year: 2018, month: 2, day: 12, hour: 22, minute: 10))
     ]
-    @Published var sectionByMonth = [Day]()
     
-    init() {
-        constructSections()
-    }
-    
-    private func constructSections() {
-        let entries = moneyEntries.sorted { $0.entryDate > $1.entryDate }
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM yyyy"
-        
-        sectionByMonth = Dictionary(grouping: entries) { entry in
-            let components = Calendar.current.dateComponents([.month, .year], from: entry.entryDate)
-            let date = Calendar.current.date(from: components)!
-            return dateFormatter.string(from: date)
-        }
-        .map { Day(title: $0.key, entries: $0.value, date: $0.value[0].entryDate) }
-        .sorted { $0.date > $1.date }
+    func fetchData() -> [MoneyEntry] {
+        return entries
     }
 }
