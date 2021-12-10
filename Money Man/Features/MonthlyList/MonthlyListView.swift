@@ -17,7 +17,7 @@ struct MonthlyListView: View {
                     Section(header: Text(year.title)) {
                         ForEach(year.months) { month in
                             NavigationLink(month.title) {
-                                MonthlyDetailsView(month: month)
+                                MonthlyDetailsView(month: month, year: year)
                             }
                             .padding(.vertical, 8)
                         }
@@ -26,5 +26,7 @@ struct MonthlyListView: View {
             }
             .navigationTitle("Calendar")
         }
+        .accentColor(.black)
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }

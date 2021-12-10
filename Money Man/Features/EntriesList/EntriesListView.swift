@@ -22,7 +22,12 @@ struct EntriesListView: View {
                 }
             }
             .navigationTitle("Money List")
+//            .navigationBarItems(trailing: NavigationLink(destination: )) {
+//                Image(systemName: "plus")
+//            })
         }
+        .accentColor(.black)
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     private func entryView(entry: MoneyEntry) -> some View {
